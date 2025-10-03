@@ -58,10 +58,10 @@ class Aluno{
         $arthurbsql = $this->pdo->prepare($arthurbsql);
 
         #para cada apelido, ligar com o valor do parametro passado
-        $sql-> bindValue(":r", $arthurbrm);
-        $sql-> bindValue(":n", $arthurbnome);
-        $sql-> bindValue(":e", $arthurbemail);
-        $sql-> bindValue(":c", $arthurbcpf);
+        $arthurbsql-> bindValue(":r", $arthurbrm);
+        $arthurbsql-> bindValue(":n", $arthurbnome);
+        $arthurbsql-> bindValue(":e", $arthurbemail);
+        $arthurbsql-> bindValue(":c", $arthurbcpf);
 
         #executar o comando
         return $sql->execute();
@@ -79,5 +79,6 @@ class Aluno{
 
 
 }
+
 
 
