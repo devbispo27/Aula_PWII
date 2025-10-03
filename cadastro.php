@@ -2,19 +2,19 @@
 require "Aluno.class.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $rm    = $_POST['rm'] ?? '';
-    $nome  = $_POST['nome'] ?? '';
-    $email = $_POST['email'] ?? '';
-    $cpf   = $_POST['cpf'] ?? '';
+    $arthurbrm    = $_POST['rm'] ?? '';
+    $arthurbnome  = $_POST['nome'] ?? '';
+    $arthurbemail = $_POST['email'] ?? '';
+    $arthurbcpf   = $_POST['cpf'] ?? '';
 
-    $aluno = new Aluno();
+    $arthurbaluno = new Aluno();
 
-    if ($aluno->conectar()) {
+    if ($arthurbaluno->conectar()) {
    
-        if ($aluno->consultar($email)) {
+        if ($arthurbaluno->consultar($arthurbemail)) {
             echo "<script>alert('Já existe um aluno cadastrado com esse e-mail.'); window.history.back();</script>";
         } else {
-            if ($aluno->cadastrar($rm, $nome, $email, $cpf)) {
+            if ($arthurbaluno->cadastrar($arthurbrm, $arthurbnome, $arthurbemail, $arthurbcpf)) {
                 echo "<script>alert('Cadastro realizado com sucesso!'); window.location.href='index.html';</script>";
             } else {
                 echo "<script>alert('Erro ao cadastrar. Tente novamente.'); window.history.back();</script>";
@@ -25,3 +25,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
+
