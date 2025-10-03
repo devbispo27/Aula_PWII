@@ -8,45 +8,45 @@ class Aluno{
     private $arthurbpdo;
 
     public function conectar(){
-        $dns    = "mysql:dbname=EtimPwiiAluno;host=localhost";
-        $dbUser = "root";
-        $dbPass = "";
+        $arthurbdns    = "mysql:dbname=EtimPwiiAluno;host=localhost";
+        $arthurbdbUser = "root";
+        $arthurbdbPass = "";
 
         try {
-            $this->pdo = new PDO($dns, $dbUser, $dbPass);
+            $arthurbthis->pdo = new PDO($arthurbdns, $arthurbdbUser, $arthurbdbPass);
             return true;
-        } catch (\Throwable $th) {
+        } catch (\Throwable $arthurbth) {
             return false;
         }
     }
 
     public function getId(){
-        return $this->arthurbid;
+        return $arthurbthis->arthurbid;
     }
     public function getRm(){
-        return $this->arthurbrm;
+        return $arthurbthis->arthurbrm;
     }
     public function getNome(){
-        return $this->arthurbnome;
+        return $arthurbthis->arthurbnome;
     }
     public function getEmail(){
-        return $this->arthurbemail;
+        return $arthurbthis->arthurbemail;
     }
     public function getCpf(){
-        return $this->arthurbcpf;
+        return $arthurbthis->arthurbcpf;
     }
 
     public function setRm($arthurbrm){
-        $this->rm = $arthurbrm ;
+        $arthurbthis->rm = $arthurbrm ;
     }
     public function setNome($arthurbnome){
-        $this->nome = $arthurbnome ;
+        $arthurbthis->nome = $arthurbnome ;
     }
     public function setEmail($arthurbemail){
-        $this->email = $arthurbemail ;
+        $arthurbthis->email = $arthurbemail ;
     }
     public function setCpf($arthurbcpf){
-        $this->cpf = $arthurbcpf ;
+        $arthurbthis->cpf = $arthurbcpf ;
     }
 
     public function cadastrar($arthurbrm, $arthurbnome, $arthurbemail, $arthurbcpf){
@@ -79,6 +79,7 @@ class Aluno{
 
 
 }
+
 
 
 
